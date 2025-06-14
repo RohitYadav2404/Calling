@@ -45,7 +45,7 @@ describe("#voiceResponse", () => {
 
   when("receives a valid phone number", () => {
     it("returns a dial verb with the number attribute", () => {
-      const toNumber = "+1235555555";
+      const toNumber = "+61851238539";
       const twiml = voiceResponse(toNumber);
       const count = countWord(twiml);
 

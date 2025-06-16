@@ -6,10 +6,10 @@ const AccessToken = twilio.jwt.AccessToken;
 const VoiceGrant = AccessToken.VoiceGrant;
 
 // 🔐 Replace these with your actual Twilio credentials
-const accountSid = 'ACeb619479c58f132b11ecf2d17dd8aca9';
-const apiKey = 'SKc780f67f965c4d226da2f13e3ff98256';
-const apiSecret = 'dcJ91HWkcgAcf6BMrX9SleDT2mp35x7G';
-const outgoingAppSid = 'AP862c21b14ccb74756418219f8826152b'; // optional
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const apiKey = process.env.TWILIO_API_KEY_SID;
+const apiSecret = process.env.TWILIO_API_SECRET;
+const appSid = process.env.TWILIO_APP_SID;
 
 const app = express();
 app.use(cors());
